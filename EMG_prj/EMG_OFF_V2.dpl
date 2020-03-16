@@ -1,0 +1,43 @@
+<Qucs Schematic 0.0.21>
+<Properties>
+  <View=-97,-90,1474,974,1,20,60>
+  <Grid=10,10,0>
+  <DataSet=EMG_OFF_V2.dat>
+  <DataDisplay=EMG_OFF_V2.sch>
+  <OpenDisplay=1>
+  <Script=EMG_OFF_V2.m>
+  <RunScript=0>
+  <showFrame=0>
+  <FrameText0=Title>
+  <FrameText1=Drawn By:>
+  <FrameText2=Date:>
+  <FrameText3=Revision:>
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+  <Rect 0 377 513 447 3 #c0c0c0 1 10 1 0 1 0 1 -1 0.2 1 1 -1 0.2 1 315 0 225 "" "" "">
+	<"ngspice/ac.vout_fil" #0000ff 0 3 0 0 0>
+	  <Mkr 4641.59 174 -358 3 0 0>
+	<"ngspice/ac.vout_ia" #ff0000 0 3 0 0 0>
+	  <Mkr 24.041 174 -171 3 0 0>
+  </Rect>
+  <Rect 590 368 498 438 3 #c0c0c0 1 10 1 0.1 1 100000 1 -40 10 41.1496 1 -1 0.2 1 315 0 225 "" "" "">
+	<"ngspice/ac.vout_fil_db" #0000ff 0 3 0 0 0>
+	  <Mkr 100 275 -350 3 0 0>
+	<"ngspice/ac.vout_ia_db" #ff0000 0 3 0 0 0>
+	  <Mkr 2.6827 129 -222 3 0 0>
+  </Rect>
+  <Rect 230 801 851 321 3 #c0c0c0 1 00 1 0 0.2 1 1 -0.1 0.5 1.1 1 -0.1 0.5 1.1 315 0 225 "" "" "">
+	<"ngspice/tran.v(vout_ia)" #0000ff 0 3 0 0 0>
+	<"ngspice/tran.v(vout_fil)" #ff0000 0 3 0 0 0>
+	<"ngspice/tran.v(vout_integ)" #ff00ff 0 3 0 0 0>
+	<"ngspice/tran.v(vout_reg)" #00ff00 0 3 0 0 0>
+  </Rect>
+</Diagrams>
+<Paintings>
+</Paintings>
