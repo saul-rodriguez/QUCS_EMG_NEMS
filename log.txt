@@ -3,16 +3,16 @@ Ngspice started...
 Types of vectors are not the same (real vs. complex)
 Types of vectors are not the same (real vs. complex)
 
-Circuit: * qucs 0.0.21 /home/saul/projects/qucs/qucs_emg_nems/emg_prj/emg_off_v2_1.sch
+Circuit: * qucs 0.0.21 /home/saul/projects/qucs_emg_nems/emg_prj/emg_off_v2_1.sch
 
 Reducing trtol to 1 for xspice 'A' devices
 Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
 
 
 No. of Data Rows : 127
-Reset re-loads circuit * qucs 0.0.21 /home/saul/projects/qucs/qucs_emg_nems/emg_prj/emg_off_v2_1.sch
+Reset re-loads circuit * qucs 0.0.21 /home/saul/projects/qucs_emg_nems/emg_prj/emg_off_v2_1.sch
 
-Circuit: * qucs 0.0.21 /home/saul/projects/qucs/qucs_emg_nems/emg_prj/emg_off_v2_1.sch
+Circuit: * qucs 0.0.21 /home/saul/projects/qucs_emg_nems/emg_prj/emg_off_v2_1.sch
 
 Reducing trtol to 1 for xspice 'A' devices
 Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
@@ -23,75 +23,75 @@ Initial Transient Solution
 
 Node                                   Voltage
 ----                                   -------
-_net0                                 -3.30996
-_net1                                 -3.46421
-_net2                                 -3.46421
-_net3                                 -1.73205
-vout_ia                            0.000116192
-_net4                                 -1.73211
+_net0                              1.10774e-05
+_net1                                  0.22198
+_net2                                -0.220846
+_net3                                 0.110996
+vout_ia                               0.442839
+_net4                                  0.11099
 _net5                                        0
-vp                                    -4.10178
-xtl074_opamp4.x1.11                   -4.29858
-xtl074_opamp4.x1.12                         -5
-xtl074_opamp4.x1.6                    -19.8393
-xtl074_opamp4.x1.7                     3.50976
-_net6                                  3.47707
+vp                                   0.0255557
+xtl074_opamp4.x1.11                   -4.65456
+xtl074_opamp4.x1.12                   -4.65455
+xtl074_opamp4.x1.6                 3.46607e-06
+xtl074_opamp4.x1.7                  -0.0244603
+_net6                               -0.0244436
 xtl074_opamp4.x1.53                        2.8
 xtl074_opamp4.x1.54                       -2.8
-xtl074_opamp4.x1.90                    0.21793
+xtl074_opamp4.x1.90               -0.000111088
 xtl074_opamp4.x1.91                         25
 xtl074_opamp4.x1.92                        -25
 vee                                         -5
 vcc                                          5
 xtl074_opamp4.x1.99                          0
-xtl074_opamp4.x1.10                   -3.45291
+xtl074_opamp4.x1.10                  -0.398582
 xtl074_opamp4.x1.9                           0
-xtl074_opamp4.x1.8                     3.50976
-xtl074_opamp3.x1.11                   -4.65161
-xtl074_opamp3.x1.12                   -4.65154
-xtl074_opamp3.x1.6                -7.40053e-06
-xtl074_opamp3.x1.7                   0.0260987
+xtl074_opamp4.x1.8                  -0.0244603
+xtl074_opamp3.x1.11                   -4.65475
+xtl074_opamp3.x1.12                   -4.65474
+xtl074_opamp3.x1.6                -6.41227e-05
+xtl074_opamp3.x1.7                    0.447816
 xtl074_opamp3.x1.53                        2.8
 xtl074_opamp3.x1.54                       -2.8
-xtl074_opamp3.x1.90                   0.173216
+xtl074_opamp3.x1.90                  0.0331843
 xtl074_opamp3.x1.91                         25
 xtl074_opamp3.x1.92                        -25
 xtl074_opamp3.x1.99                          0
-xtl074_opamp3.x1.10                   -2.12808
+xtl074_opamp3.x1.10                  -0.287761
 xtl074_opamp3.x1.9                           0
-xtl074_opamp3.x1.8                   0.0260987
-xtl074_opamp2.x1.11                   -4.86163
-xtl074_opamp2.x1.12                   -4.43477
-xtl074_opamp2.x1.6                      12.068
-xtl074_opamp2.x1.7                    -3.50958
+xtl074_opamp3.x1.8                    0.447816
+xtl074_opamp2.x1.11                    -4.6546
+xtl074_opamp2.x1.12                   -4.65459
+xtl074_opamp2.x1.6                -3.32335e-05
+xtl074_opamp2.x1.7                    0.228314
 xtl074_opamp2.x1.53                        2.8
 xtl074_opamp2.x1.54                       -2.8
-xtl074_opamp2.x1.90                  -0.302432
+xtl074_opamp2.x1.90                   0.042224
 xtl074_opamp2.x1.91                         25
 xtl074_opamp2.x1.92                        -25
 xtl074_opamp2.x1.99                          0
-xtl074_opamp2.x1.10                   -4.08359
-_net8                                 -3.46421
-_net7                                 -4.10178
+xtl074_opamp2.x1.10                  -0.373066
+_net8                                0.0255645
+_net7                                0.0255553
 xtl074_opamp2.x1.9                           0
-xtl074_opamp2.x1.8                    -3.50958
-xtl074_opamp1.x1.11                   -4.86163
-xtl074_opamp1.x1.12                   -4.43477
-xtl074_opamp1.x1.6                      12.068
-xtl074_opamp1.x1.7                    -3.50958
+xtl074_opamp2.x1.8                    0.228314
+xtl074_opamp1.x1.11                   -4.65452
+xtl074_opamp1.x1.12                    -4.6545
+xtl074_opamp1.x1.6                 3.40096e-05
+xtl074_opamp1.x1.7                   -0.230476
 xtl074_opamp1.x1.53                        2.8
 xtl074_opamp1.x1.54                       -2.8
-xtl074_opamp1.x1.90                  -0.302438
+xtl074_opamp1.x1.90                 -0.0641979
 xtl074_opamp1.x1.91                         25
 xtl074_opamp1.x1.92                        -25
 xtl074_opamp1.x1.99                          0
-xtl074_opamp1.x1.10                   -4.08359
-_net10                                -3.46421
-_net9                                 -4.10178
+xtl074_opamp1.x1.10                   -0.42299
+_net10                               -0.024432
+_net9                               -0.0244447
 xtl074_opamp1.x1.9                           0
-xtl074_opamp1.x1.8                    -3.50958
-_net11                                -4.10178
-vn                                    -4.10178
+xtl074_opamp1.x1.8                   -0.230476
+_net11                               0.0255557
+vn                                  -0.0244443
 _net12                                       0
 gnd_earth                                    0
 xtl074_opamp6.x1.11                   -4.65456
@@ -111,7 +111,7 @@ xtl074_opamp6.x1.9                           0
 xtl074_opamp6.x1.8                -2.64808e-05
 xtl074_opamp7.x1.11                   -4.65456
 xtl074_opamp7.x1.12                   -4.65455
-xtl074_opamp7.x1.6                -2.61761e-09
+xtl074_opamp7.x1.6                -2.61764e-09
 xtl074_opamp7.x1.7                  1.6806e-05
 vout_rec                           1.51384e-05
 xtl074_opamp7.x1.53                        2.8
@@ -143,7 +143,7 @@ xtl074_opamp8.x1.9                           0
 xtl074_opamp8.x1.8                 -0.00040274
 xtl074_opamp9.x1.11                   -4.65456
 xtl074_opamp9.x1.12                   -4.65455
-xtl074_opamp9.x1.6                -1.50536e-09
+xtl074_opamp9.x1.6                -1.50538e-09
 xtl074_opamp9.x1.7                 1.06254e-05
 _net20                             1.06202e-05
 xtl074_opamp9.x1.53                        2.8
@@ -176,7 +176,7 @@ _net24                             1.09706e-05
 _net25                             1.13912e-05
 xtl074_opamp12.x1.11                  -4.65456
 xtl074_opamp12.x1.12                  -4.65455
-xtl074_opamp12.x1.6               -4.11973e-09
+xtl074_opamp12.x1.6               -4.11976e-09
 xtl074_opamp12.x1.7                2.55397e-05
 vout_fil                            2.2011e-05
 xtl074_opamp12.x1.53                       2.8
@@ -189,8 +189,7 @@ xtl074_opamp12.x1.10                 -0.398571
 _net26                             1.10407e-05
 xtl074_opamp12.x1.9                          0
 xtl074_opamp12.x1.8                2.55397e-05
-_net27                                 3.47707
-_net28                                       0
+_net27                                       0
 h.xtl074_opamp12.x1.hlim#branch    -4.70496e-17
 v.xtl074_opamp12.x1.vlim#branch     2.35248e-08
 h.xtl074_opamp11.x1.hlim#branch    -1.40191e-19
@@ -203,14 +202,14 @@ h.xtl074_opamp7.x1.hlim#branch    -2.22348e-17
 v.xtl074_opamp7.x1.vlim#branch     1.11174e-08
 h.xtl074_opamp6.x1.hlim#branch      6.0672e-17
 v.xtl074_opamp6.x1.vlim#branch     -3.0336e-08
-h.xtl074_opamp1.x1.hlim#branch     6.04875e-13
-v.xtl074_opamp1.x1.vlim#branch    -0.000302438
-h.xtl074_opamp2.x1.hlim#branch     6.04864e-13
-v.xtl074_opamp2.x1.vlim#branch    -0.000302432
-h.xtl074_opamp3.x1.hlim#branch    -3.46433e-13
-v.xtl074_opamp3.x1.vlim#branch     0.000173216
-h.xtl074_opamp4.x1.hlim#branch    -4.35859e-13
-v.xtl074_opamp4.x1.vlim#branch      0.00021793
+h.xtl074_opamp1.x1.hlim#branch     1.28396e-13
+v.xtl074_opamp1.x1.vlim#branch    -6.41979e-05
+h.xtl074_opamp2.x1.hlim#branch    -8.44479e-14
+v.xtl074_opamp2.x1.vlim#branch      4.2224e-05
+h.xtl074_opamp3.x1.hlim#branch    -6.63685e-14
+v.xtl074_opamp3.x1.vlim#branch     3.31843e-05
+h.xtl074_opamp4.x1.hlim#branch     2.22176e-16
+v.xtl074_opamp4.x1.vlim#branch    -1.11088e-07
 vpr1#branch                                  0
 v.xtl074_opamp12.x1.vln#branch    -2.50008e-11
 v.xtl074_opamp12.x1.vlp#branch    -2.50008e-11
@@ -242,54 +241,66 @@ v.xtl074_opamp6.x1.vlp#branch     -2.50008e-11
 v.xtl074_opamp6.x1.ve#branch       2.80078e-12
 v.xtl074_opamp6.x1.vc#branch       2.80082e-12
 v.xtl074_opamp6.x1.vb#branch       4.39867e-14
-v10#branch                                   0
-v7#branch                           -0.0484017
-v4#branch                           -0.0484265
+v10#branch                        -3.50733e-11
+v7#branch                           -0.0486173
+v4#branch                           -0.0486136
 v9#branch                                    0
-v11#branch                                   0
-v.xtl074_opamp1.x1.vln#branch     -2.46984e-11
-v.xtl074_opamp1.x1.vlp#branch     -2.53032e-11
-v.xtl074_opamp1.x1.ve#branch      -0.000113796
-v.xtl074_opamp1.x1.vc#branch       6.26501e-12
-v.xtl074_opamp1.x1.vb#branch        0.00012068
-v.xtl074_opamp2.x1.vln#branch     -2.46984e-11
-v.xtl074_opamp2.x1.vlp#branch     -2.53032e-11
-v.xtl074_opamp2.x1.ve#branch      -0.000113796
-v.xtl074_opamp2.x1.vc#branch       6.26501e-12
-v.xtl074_opamp2.x1.vb#branch        0.00012068
-v.xtl074_opamp3.x1.vln#branch      -2.5174e-11
-v.xtl074_opamp3.x1.vlp#branch     -2.48276e-11
-v.xtl074_opamp3.x1.ve#branch       2.80092e-12
-v.xtl074_opamp3.x1.vc#branch       2.80068e-12
-v.xtl074_opamp3.x1.vb#branch      -7.40066e-11
-v.xtl074_opamp4.x1.vln#branch     -2.52187e-11
-v.xtl074_opamp4.x1.vlp#branch     -2.47829e-11
-v.xtl074_opamp4.x1.ve#branch       6.27787e-12
-v.xtl074_opamp4.x1.vc#branch      -0.000187079
-v.xtl074_opamp4.x1.vb#branch      -0.000198393
+v11#branch                        -3.50733e-11
+v.xtl074_opamp1.x1.vln#branch     -2.49366e-11
+v.xtl074_opamp1.x1.vlp#branch      -2.5065e-11
+v.xtl074_opamp1.x1.ve#branch       2.57995e-12
+v.xtl074_opamp1.x1.vc#branch       3.02165e-12
+v.xtl074_opamp1.x1.vb#branch       3.40096e-10
+v.xtl074_opamp2.x1.vln#branch      -2.5043e-11
+v.xtl074_opamp2.x1.vlp#branch     -2.49586e-11
+v.xtl074_opamp2.x1.ve#branch       3.02278e-12
+v.xtl074_opamp2.x1.vc#branch       2.57882e-12
+v.xtl074_opamp2.x1.vb#branch      -3.32335e-10
+v.xtl074_opamp3.x1.vln#branch      -2.5034e-11
+v.xtl074_opamp3.x1.vlp#branch     -2.49676e-11
+v.xtl074_opamp3.x1.ve#branch       3.24364e-12
+v.xtl074_opamp3.x1.vc#branch       2.35796e-12
+v.xtl074_opamp3.x1.vb#branch      -6.41227e-10
+v.xtl074_opamp4.x1.vln#branch     -2.50007e-11
+v.xtl074_opamp4.x1.vlp#branch     -2.50009e-11
+v.xtl074_opamp4.x1.ve#branch       2.77636e-12
+v.xtl074_opamp4.x1.vc#branch       2.82524e-12
+v.xtl074_opamp4.x1.vb#branch       3.46607e-11
 a$poly$e.xtl074_opamp12.x1.egnd#branch_1_0    -4.11996e-07
 a$poly$e.xtl074_opamp11.x1.egnd#branch_1_0    -3.88552e-07
 a$poly$e.xtl074_opamp9.x1.egnd#branch_1_0    -3.88517e-07
 a$poly$e.xtl074_opamp8.x1.egnd#branch_1_0    -3.84351e-07
 a$poly$e.xtl074_opamp7.x1.egnd#branch_1_0    -3.99602e-07
 a$poly$e.xtl074_opamp6.x1.egnd#branch_1_0    -3.58146e-07
-a$poly$e.xtl074_opamp1.x1.egnd#branch_1_0     0.000298457
-a$poly$e.xtl074_opamp2.x1.egnd#branch_1_0     0.000298452
-a$poly$e.xtl074_opamp3.x1.egnd#branch_1_0    -0.000175291
-a$poly$e.xtl074_opamp4.x1.egnd#branch_1_0    -0.000221295
+a$poly$e.xtl074_opamp1.x1.egnd#branch_1_0     6.37856e-05
+a$poly$e.xtl074_opamp2.x1.egnd#branch_1_0    -4.25876e-05
+a$poly$e.xtl074_opamp3.x1.egnd#branch_1_0    -3.34647e-05
+a$poly$e.xtl074_opamp4.x1.egnd#branch_1_0    -2.77394e-07
 
- Reference value :  3.46503e-02
- Reference value :  7.75497e-02
- Reference value :  1.34135e-01
- Reference value :  1.75320e-01
- Reference value :  2.25646e-01
- Reference value :  2.74629e-01
- Reference value :  3.16600e-01
- Reference value :  3.74171e-01
+ Reference value :  1.76505e-02
+ Reference value :  3.75200e-02
+ Reference value :  5.73096e-02
+ Reference value :  7.71191e-02
+ Reference value :  9.69686e-02
+ Reference value :  1.16748e-01
+ Reference value :  1.36628e-01
+ Reference value :  1.56427e-01
+ Reference value :  1.76267e-01
+ Reference value :  1.96126e-01
+ Reference value :  2.15866e-01
+ Reference value :  2.35815e-01
+ Reference value :  2.55655e-01
+ Reference value :  2.75584e-01
+ Reference value :  2.95334e-01
+ Reference value :  3.15263e-01
+ Reference value :  3.35153e-01
+ Reference value :  3.55052e-01
+ Reference value :  3.74892e-01
+ Reference value :  3.94801e-01
 
-No. of Data Rows : 7061
-Reset re-loads circuit * qucs 0.0.21 /home/saul/projects/qucs/qucs_emg_nems/emg_prj/emg_off_v2_1.sch
+No. of Data Rows : 40015
+Reset re-loads circuit * qucs 0.0.21 /home/saul/projects/qucs_emg_nems/emg_prj/emg_off_v2_1.sch
 
-Circuit: * qucs 0.0.21 /home/saul/projects/qucs/qucs_emg_nems/emg_prj/emg_off_v2_1.sch
+Circuit: * qucs 0.0.21 /home/saul/projects/qucs_emg_nems/emg_prj/emg_off_v2_1.sch
 
 ngspice-30 done

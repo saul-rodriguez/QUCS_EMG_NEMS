@@ -1,6 +1,6 @@
 <Qucs Schematic 0.0.21>
 <Properties>
-  <View=-74,-284,2134,808,0.683013,0,0>
+  <View=-74,-344,2134,1233,0.683013,0,0>
   <Grid=10,10,0>
   <DataSet=EMG_OFF_V2_1.dat>
   <DataDisplay=EMG_OFF_V2_1.sch>
@@ -44,6 +44,9 @@
   </Rect>
   <Rect 1500 580 510 380 3 #c0c0c0 1 00 1 0 0.2 1 1 -0.1 0.5 1.1 1 -0.1 0.5 1.1 315 0 225 "" "" "">
 	<"ngspice/tran.i(pr1)" #0000ff 0 3 0 0 0>
+  </Rect>
+  <Rect 126 1149 1246 397 3 #c0c0c0 1 00 1 0 0.2 1 1 -0.1 0.5 1.1 1 -0.1 0.5 1.1 315 0 225 "" "" "">
+	<"ngspice/tran.v(vout_ia)" #0000ff 0 3 0 0 0>
   </Rect>
 </Diagrams>
 <Paintings>
