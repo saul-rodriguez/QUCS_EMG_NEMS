@@ -1,0 +1,227 @@
+* Qucs 0.0.21 /home/saul/projects/QUCS_EMG_NEMS/NEMS_prj/CURRENT_GEN_DUAL_OPAMP.sch
+.INCLUDE "/usr/local/share/qucs-s/xspice_cmlib/include/ngspice_mathfunc.inc"
+* Qucs 0.0.21  /home/saul/projects/QUCS_EMG_NEMS/NEMS_prj/CURRENT_GEN_DUAL_OPAMP.sch
+
+.SUBCKT BSS84 1 2 3
+* 1=drain  2=gate  3=source
+Cgs  2 3 20.6E-12
+Cgd1 2 4 56.1E-12
+Cgd2 1 4 3.5E-12
+M1 1 2 3 3 MOST1
+M2 4 2 1 3 MOST2
+D1 1 3 Dbody
+.MODEL MOST1 PMOS(LEVEL=3 VTO=-1.7 W=12m L=2u KP=10.07u RD=3.952 RS=20m)
+.MODEL MOST2 PMOS(VTO=3.25 W=12m L=2u KP=10.07u RS=20m)
+.MODEL Dbody D(CJO=45.35p VJ=462.4m M=325.5m IS=442f N=1.051 RS=1.243
++              TT=105n BV=50 IBV=10u)
+.ENDS
+
+* Qucs 0.0.21  BSS84.sch
+.SUBCKT BSS84 _net0 _net1 _net2 
+X1 _net0 _net1 _net2 BSS84
+.ENDS
+
+*---------- 2N7002 Spice Model ----------
+.SUBCKT N7002 10 20 30 
+*     TERMINALS:  D  G  S
+M1 1 2 3 3 NMOS L = 1E-006 W = 1E-006 
+RD 10 1 0.976 
+RS 30 3 0.001 
+RG 20 2 160.6 
+CGS 2 3 2E-011 
+EGD 12 0 2 1 1 
+VFB 14 0 0 
+FFB 2 1 VFB 1 
+CGD 13 14 5.9E-011 
+R1 13 0 1 
+D1 12 13 DLIM 
+DDG 15 14 DCGD 
+R2 12 15 1 
+D2 15 0 DLIM 
+DSD 3 10 DSUB 
+.MODEL NMOS NMOS LEVEL = 3 VMAX = 1E+006 ETA = 0 VTO = 2.154 
++ TOX = 6E-008 NSUB = 1E+016 KP = 0.4654 KAPPA = 1E-015 U0 = 400 
+.MODEL DCGD D CJO = 1.2E-011 VJ = 0.6 M = 0.6 
+.MODEL DSUB D IS = 6.808E-010 N = 1.576 RS = 0.1408 BV = 72 CJO = 8E-012 VJ = 0.8 M = 0.6474 
+.MODEL DLIM D IS = 0.0001 
+.ENDS
+*Diodes N7002 Spice Model v0 Last Revised 2017/2/9
+
+* Qucs 0.0.21  2N7002.sch
+.SUBCKT n2N7002 _net0 _net1 _net2 
+X1 _net0 _net1 _net2 N7002
+.ENDS
+
+* AD8574 SPICE Macro-model
+* Description: Amplifier
+* Generic Desc: 2.7/5V, CMOS, OP, Zero Drift, RRIO, 4X
+* Developed by: TAM / ADSC
+* Revision History: 08/10/2012 - Updated to new header style
+* 1.0 (10/1999)
+* Copyright 1999, 2012 by Analog Devices
+*
+* Refer to http://www.analog.com/Analog_Root/static/techSupport/designTools/spiceModels/license/spice_general.html for License Statement. Use of this model 
+* indicates your acceptance of the terms and provisions in the License Statement.
+*
+* BEGIN Notes:
+*
+* Not Modeled:
+*    
+* Parameters modeled include: 
+*
+* END Notes
+*
+* Node Assignments
+*			noninverting input
+*			|	inverting input
+*			|	|	 positive supply
+*			|	|	 |	 negative supply
+*			|	|	 |	 |	 output
+*			|	|	 |	 |	 |
+*			|	|	 |	 |	 |
+.SUBCKT AD8574 		1       2       99      50      45
+* 
+* INPUT STAGE
+*
+M1   4  7  8  8 PIX L=1E-6 W=355.3E-6
+M2   6  2  8  8 PIX L=1E-6 W=355.3E-6
+M3  11  7 10 10 NIX L=1E-6 W=355.3E-6
+M4  12  2 10 10 NIX L=1E-6 W=355.3E-6
+RC1  4 14 9E+3
+RC2  6 16 9E+3
+RC3 17 11 9E+3
+RC4 18 12 9E+3
+RC5 14 50 1E+3
+RC6 16 50 1E+3
+RC7 99 17 1E+3
+RC8 99 18 1E+3
+C1  14 16 30E-12
+C2  17 18 30E-12
+I1  99  8 100E-6
+I2  10 50 100E-6
+V1  99  9 0.3
+V2  13 50 0.3
+D1   8  9 DX
+D2  13 10 DX
+EOS  7  1 POLY(3) (22,98) (73,98) (81,98) 1E-6 1 1 1
+IOS  1  2 2.5E-12
+*
+* CMRR 120dB, ZERO AT 20Hz
+*
+ECM1 21 98 POLY(2) (1,98) (2,98) 0 .5 .5
+RCM1 21 22 50E+6
+CCM1 21 22 159E-12
+RCM2 22 98 50
+*
+* PSRR=120dB, ZERO AT 1Hz
+*
+RPS1 70  0 1E+6
+RPS2 71  0 1E+6
+CPS1 99 70 1E-5
+CPS2 50 71 1E-5
+EPSY 98 72 POLY(2) (70,0) (0,71) 0 1 1
+RPS3 72 73 15.9E+6
+CPS3 72 73 10E-9
+RPS4 73 98 16
+*
+* VOLTAGE NOISE REFERENCE OF 51nV/rt(Hz)
+*
+VN1 80 98 0
+RN1 80 98 16.45E-3
+HN  81 98 VN1 51
+RN2 81 98 1
+*
+* INTERNAL VOLTAGE REFERENCE
+*
+EREF 98  0 POLY(2) (99,0) (50,0) 0 .5 .5
+GSY  99 50 (99,50) 48E-6 
+EVP  97 98 (99,50) 0.5
+EVN  51 98 (50,99) 0.5
+*
+* LHP ZERO AT 7MHz, POLE AT 50MHz
+*
+E1 32 98 POLY(2) (4,6) (11,12) 0 .5814 .5814
+R2 32 33 3.7E+3
+R3 33 98 22.74E+3
+C3 32 33 1E-12
+*
+* GAIN STAGE
+*
+G1 98 30 (33,98) 22.7E-6
+R1 30 98 259.1E+6
+CF 45 30 45.4E-12
+D3 30 97 DX
+D4 51 30 DX
+*
+* OUTPUT STAGE
+*
+M5  45 46 99 99 POX L=1E-6 W=1.111E-3
+M6  45 47 50 50 NOX L=1E-6 W=1.6E-3
+EG1 99 46 POLY(1) (98,30) 1.1936 1
+EG2 47 50 POLY(1) (30,98) 1.2324 1
+*
+* MODELS
+*
+.MODEL POX PMOS (LEVEL=2,KP=10E-6,VTO=-1,LAMBDA=0.001,RD=8)
+.MODEL NOX NMOS (LEVEL=2,KP=10E-6,VTO=+1,LAMBDA=0.001,RD=5)
+.MODEL PIX PMOS (LEVEL=2,KP=100E-6,VTO=-1,LAMBDA=0.01)
+.MODEL NIX NMOS (LEVEL=2,KP=100E-6,VTO=+1,LAMBDA=0.01)
+.MODEL DX D(IS=1E-14,RS=5)
+.ENDS AD8574
+
+
+
+
+
+* Qucs 0.0.21  AD8574.sch
+.SUBCKT AD8574 _net0 _net1 _net2 _net3 _net4 
+X1 _net0 _net1 _net2 _net3 _net4 AD8574
+.ENDS
+.INCLUDE "/home/saul/projects/QUCS_EMG_NEMS/NEMS_prj/bcmodels.lib"
+.PARAM VIN=0.5
+XSUB_BSS841 _net0 _net1 VDD15V BSS84
+VPr5 _net0 VB DC 0
+VPr2 _net2 VA DC 0
+VPr6 VB _net3 DC 0
+VPr7 VA _net4 DC 0
+R3 VA VB  500
+XSUB_2N70021 _net3 _net1 _net5 n2N7002
+XSUB_BSS842 _net2 _net6 VDD15V BSS84
+XSUB_2N70022 _net4 _net6 _net7 n2N7002
+VPr9 VDD15V _net8 DC 0
+Q28 _net1  _net9  0 bc547c
+R10 _net8 _net1  10K
+V4 Ctrl1 _net10 DC 0
+VPr3 Ctrl1 _net11 DC 0
+Q27 _net6  _net12  0 bc547c
+R5 VDD15V _net6  10K
+R4 _net12 _net11  1K
+R11 _net9 _net13  1K
+VPr10 Ctrl2 _net13 DC 0
+V6 Ctrl2 _net14 DC 0
+V2 V3_3V 0 DC 3.3
+Q1 _net15  _net16  _net17 bc547c
+XSUB1 _net18 _net17 V3_3V 0 _net16 AD8574
+V3 _net18 0 DC {VIN}
+VPr1 _net5 _net15 DC 0
+R2 0 _net17  33
+Q31 _net19  _net20  _net21 bc547c
+XSUB2 _net18 _net21 V3_3V 0 _net20 AD8574
+R12 0 _net21  33
+V1 VDD15V 0 DC 25
+V7 _net14 0 DC 0 PULSE( 0  3.3 0N 1N 1N 0.0002 0.000400002)  AC 0
+
+VPr11 _net7 _net19 DC 0
+V8 _net10 0 DC 0 PULSE( 0  3.3 200U 1N 1N 0.0002 0.000400002)  AC 0
+.control
+echo "" > spice4qucs.cir.noise
+echo "" > spice4qucs.cir.pz
+let VIN=0.5
+tran 9.99998e-10 0.0005 0 
+write CURRENT_GEN_DUAL_OPAMP_tran.txt v(Ctrl1) v(Ctrl2) v(V3_3V) v(VA) v(VB) v(VDD15V) VPr1#branch VPr10#branch VPr11#branch VPr2#branch VPr3#branch VPr5#branch VPr6#branch VPr7#branch VPr9#branch 
+destroy all
+reset
+
+exit
+.endc
+.END
