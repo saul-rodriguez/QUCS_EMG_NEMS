@@ -1,147 +1,36 @@
-Ngspice started...
-Warning: redefinition of .subckt bss84, ignored
-Warning: redefinition of .subckt ad8574, ignored
+Output:
+-------
 
-Circuit: * qucs 0.0.21 /home/saul/projects/qucs_emg_nems/nems_prj/current_gen_single_opamp.sch
+Starting new simulation on ons 27. maj 2020 at 10:49:04:507
 
-Reducing trtol to 1 for xspice 'A' devices
-Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+creating netlist... done.
+Starting /usr/local/bin/qucsator
+
+project location: 
+modules to load: 0
+factorycreate.size() is 0
+factorycreate has registered:
+parsing netlist...
+checking netlist...
+checker notice, variable `Pr1.i' in equation `R' not yet defined
+netlist content
+      1 IProbe instances
+      1 AC instances
+      1 DC instances
+      3 R instances
+      1 VCCS instances
+      1 Vdc instances
+      1 Vac instances
+creating netlist...
+checker notice, variable `Pr1.i' in equation `R' not yet defined
+checker notice, variable `Pr1.i' in equation `R' not yet defined
+
+Simulation ended on ons 27. maj 2020 at 10:49:04:524
+Ready.
 
 
-Initial Transient Solution
---------------------------
 
-Node                                   Voltage
-----                                   -------
-_net1                                       20
-_net2                                       20
-xsub_bss841.4                            16.75
-_net0                                 0.421735
-vb                                    0.421735
-_net3                                 0.421735
-_net4                                 0.421735
-_net5                                 0.421735
-_net6                                 0.421735
-xsub_2n70021.x1.1                     0.421735
-xsub_2n70021.x1.2                           20
-xsub_2n70021.x1.3                     0.421735
-_net8                                 0.421735
-_net7                                       20
-xsub_2n70021.x1.12                     19.5782
-xsub_2n70021.x1.14                           0
-xsub_2n70021.x1.13                     19.2635
-xsub_2n70021.x1.15                    0.314739
-_net9                                       20
-xsub_bss842.4                            16.75
-xsub_2n70022.x1.1                     0.421735
-xsub_2n70022.x1.2                           20
-xsub_2n70022.x1.3                     0.421735
-_net10                                      20
-xsub_2n70022.x1.12                     19.5782
-xsub_2n70022.x1.14                           0
-xsub_2n70022.x1.13                     19.2635
-xsub_2n70022.x1.15                    0.314739
-ctrl1                                        0
-_net11                                       0
-_net12                                       0
-_net13                              6.7606e-08
-_net14                                      20
-_net15                              6.7606e-08
-_net16                                       0
-ctrl2                                        0
-_net17                                       0
-v3_3v                                        5
-_net18                                0.421735
-_net19                                 4.54814
-_net20                                0.400035
-_net21                                       1
-xsub1.4                            1.48488e-08
-xsub1.7                               0.999999
-xsub1.8                                1.47488
-xsub1.6                                      1
-xsub1.11                               4.00019
-xsub1.10                            -0.0734768
-xsub1.12                                     5
-xsub1.14                           1.48488e-09
-xsub1.16                                   0.1
-xsub1.17                               4.90002
-xsub1.18                                     5
-xsub1.9                                    4.7
-xsub1.13                                   0.3
-xsub1.22                                   2.5
-xsub1.98                                   2.5
-xsub1.73                                   2.5
-xsub1.81                                   2.5
-xsub1.21                              0.700018
-xsub1.70                                     0
-xsub1.71                                     0
-xsub1.72                                   2.5
-xsub1.80                                   2.5
-xsub1.97                                     5
-xsub1.51                                     0
-xsub1.32                               1.33731
-xsub1.33                               1.50002
-xsub1.30                             -0.557309
-xsub1.46                              0.749091
-xsub1.47                              -1.82491
-va                                    0.421735
-v.xsub_2n70022.x1.vfb#branch       1.92666e-09
-v.xsub_2n70021.x1.vfb#branch       1.92666e-09
-h.xsub1.hn#branch                            0
-v.xsub1.vn1#branch                           0
-e.xsub1.evn#branch                -2.26879e-05
-e.xsub1.evp#branch                -5.56731e-12
-e.xsub_2n70022.x1.egd#branch           -38.527
-e.xsub_2n70021.x1.egd#branch           -38.527
-vpr11#branch                      -1.05471e-15
-vpr1#branch                        3.97819e-09
-v.xsub1.v2#branch                 -1.86642e-08
-v.xsub1.v1#branch                  3.23512e-12
-v3#branch                             -2.5e-12
-v2#branch                           -0.0125623
-v7#branch                           6.7606e-11
-v6#branch                           6.7606e-11
-vpr10#branch                       -6.7606e-11
-v8#branch                           6.7606e-11
-vpr9#branch                        2.01438e-09
-v1#branch                         -4.15352e-09
-vpr3#branch                        -6.7606e-11
-v4#branch                           6.7606e-11
-vpr7#branch                        6.24542e-11
-vpr6#branch                        6.24532e-11
-vpr2#branch                        6.24532e-11
-vpr5#branch                        6.24532e-11
-a$poly$e.xsub1.eg2#branch_1_0                0
-a$poly$e.xsub1.eg1#branch_1_0                0
-a$poly$e.xsub1.e1#branch_1_0       4.39747e-05
-a$poly$e.xsub1.eref#branch_1_0    -1.52573e-14
-a$poly$e.xsub1.epsy#branch_1_0               0
-a$poly$e.xsub1.ecm1#branch_1_0     3.59996e-08
-a$poly$e.xsub1.eos#branch_1_0                0
+Errors and Warnings:
+--------------------
 
- Reference value :  7.66608e-05
- Reference value :  1.64650e-04
- Reference value :  2.28528e-04
- Reference value :  2.72147e-04
- Reference value :  3.15607e-04
- Reference value :  3.59256e-04
- Reference value :  4.02386e-04
- Reference value :  4.52071e-04
- Reference value :  5.02270e-04
- Reference value :  5.53180e-04
- Reference value :  6.01899e-04
- Reference value :  6.45357e-04
- Reference value :  6.88037e-04
- Reference value :  7.31066e-04
- Reference value :  7.74386e-04
- Reference value :  8.17683e-04
- Reference value :  8.53822e-04
- Reference value :  8.90092e-04
- Reference value :  9.26592e-04
- Reference value :  9.63511e-04
-No. of Data Rows : 100946
-Reset re-loads circuit * qucs 0.0.21 /home/saul/projects/qucs_emg_nems/nems_prj/current_gen_single_opamp.sch
 
-Circuit: * qucs 0.0.21 /home/saul/projects/qucs_emg_nems/nems_prj/current_gen_single_opamp.sch
-
-ngspice-31 done

@@ -1,0 +1,12 @@
+# Qucs 0.0.20  /home/saul/projects/QUCS_EMG_NEMS/EXAM_prj/2a.sch
+
+Vdc:V1 _net0 gnd U="12"
+VCCS:SRC1 _net1 gnd _net2 gnd G="0.5m" T="0"
+R:R1 _net0 _net1 R="2k" Temp="26.85" Tc1="0.0" Tc2="0.0" Tnom="26.85"
+R:R2 _net1 _net2 R="2k" Temp="26.85" Tc1="0.0" Tc2="0.0" Tnom="26.85"
+R:R3 gnd _net1 R="1k" Temp="26.85" Tc1="0.0" Tc2="0.0" Tnom="26.85"
+.DC:DC1 Temp="26.85" reltol="0.001" abstol="1 pA" vntol="1 uV" saveOPs="no" MaxIter="150" saveAll="no" convHelper="none" Solver="CroutLU"
+.AC:AC1 Type="lin" Start="1 GHz" Stop="10 GHz" Points="19" Noise="no"
+Vac:V2 _net3 gnd U="1 V" f="1 GHz" Phase="0" Theta="0"
+IProbe:Pr1 _net2 _net3
+Eqn:Eqn1 R="1/Pr1.i" Export="yes"
